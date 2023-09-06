@@ -1,0 +1,15 @@
+.barraBuscar{
+    background-color: rgba(68, 223, 54, 0.889);
+    border-radius: 4px;
+    color: rgb(0, 0, 0);
+   text-align: center;
+   text-decoration: none;
+   display: inline-block;
+   font-size: 16px;
+}
+.botonhover{
+    background-color: rgb(41, 39, 172);
+}
+.botonBarra{
+background-color: rgb(46, 163, 195);
+}
