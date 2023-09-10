@@ -1,5 +1,4 @@
 export const addFav = (character) => {
-  console.log(character);
   return {
     type: "ADD_FAV",
     payload: character,

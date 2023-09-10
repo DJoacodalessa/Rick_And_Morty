@@ -1,10 +1,9 @@
+import React from "react";
 import { connect } from "react-redux";
 import Card from "../Card/Card";
-import React from "react";
 
 class Favorites extends React.Component {
   render() {
-    console.log(this.props);
     return (
       <div>
         {this.props.myFavorites?.map((character) => {
