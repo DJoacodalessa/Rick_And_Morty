@@ -2,6 +2,7 @@ import styles from "./Card.module.css";
 import { addFav, removeFav } from "../../Redux/action";
 import { connect } from "react-redux";
 import { useState, useEffect } from "react";
+
 const Card = (props) => {
   const {
     id,
@@ -14,19 +15,22 @@ const Card = (props) => {
     onClose,
     myFavorites,
   } = props;
+
   const [isFav, setIsFav] = useState(false);
+
   const handleFavorites = () => {
-    isFav ? removeFav(id) : addFav(props);
+    isFav ? props.removeFav(id) : props.addFav(props.character); // Correcciones aquí
     setIsFav(!isFav);
   };
+
   useEffect(() => {
-    console.log(myFavorites);
     myFavorites?.forEach((fav) => {
       if (fav.id === props.id) {
         setIsFav(true);
       }
     });
-  }, [myFavorites]);
+  }, [myFavorites, props.id]);
+
   return (
     <div className={styles.carta}>
       {isFav ? (
@@ -46,6 +50,8 @@ const Card = (props) => {
     </div>
   );
 };
+
+
 const mapDispachToProps = (dispach) => {
   return {
     addFav: (character) => {
@@ -62,4 +68,5 @@ const mapStateToProps = (state) => {
     myFavorites: state.myFavorites,
   };
 };
+
 export default connect(mapStateToProps, mapDispachToProps)(Card);

@@ -4,9 +4,7 @@ const AboutText = () => {
     <>
       <h1 className={styles.titulo}> Sobre mi</h1>
       <p className={styles.parrafo}>
-        Soy un fanatico del universo de Rick & Morty, los conoci a partir del
-        lanzamineto de su segunda temporada y desde ahi, me he leido hasta las
-        novelas.
+        Mi nombre es joaquin, soy un apasionado de la progrmacion y tuve la oportunidad de hacer un proyecto de aplicacion sobre Rick & Morty, espero que les guste!
       </p>
     </>
   );
