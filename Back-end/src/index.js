@@ -4,6 +4,14 @@ const PORT = 3001;
 const router = require('./routes/index'); // Importa tu router
 const {conn} = require("./DB_connection")
 // Middleware para permitir CORS
+
+conn.sync({force: true}).then(()=>{
+   server.listen(PORT, () => {
+      console.log('Server raised in port: ' + PORT);
+   });
+   
+})
+
 server.use((req, res, next) => {
    res.header('Access-Control-Allow-Origin', '*');
    res.header('Access-Control-Allow-Credentials', 'true');
@@ -23,8 +31,4 @@ server.use(express.json());
 
 // Middleware para agregar "/rickandmorty" antes de cada ruta
 server.use('/rickandmorty', router);
-
-server.listen(PORT, () => {
-   console.log('Server raised in port: ' + PORT);
-});
 
