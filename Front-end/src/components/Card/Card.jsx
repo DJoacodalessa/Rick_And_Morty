@@ -19,7 +19,7 @@ const Card = (props) => {
   const [isFav, setIsFav] = useState(false);
 
   const handleFavorites = () => {
-    isFav ? props.removeFav(id) : props.addFav(props.character); // Correcciones aquí
+    isFav ? props.removeFav(id) : props.addFav(props.character);
     setIsFav(!isFav);
   };
 

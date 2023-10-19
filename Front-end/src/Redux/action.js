@@ -13,7 +13,6 @@ export const addFav = (character) => {
          });
       } catch (error) {
          console.error(error);
-         // Maneja el error aquí
       }
    };
 };
@@ -30,7 +29,6 @@ export const removeFav = (id) => {
          });
       } catch (error) {
          console.error(error);
-         // Maneja el error aquí
       }
    };
 };
