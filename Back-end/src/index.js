@@ -2,7 +2,7 @@ const express = require('express');
 const server = express();
 const PORT = 3001;
 const router = require('./routes/index'); // Importa tu router
-const {conn} = require("./DB_connection")
+const {conn} = require("./src/DB_connection")
 // Middleware para permitir CORS
 
 conn.sync({force: true}).then(()=>{
