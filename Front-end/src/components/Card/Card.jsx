@@ -58,7 +58,7 @@ const mapDispachToProps = (dispach) => {
       dispach(addFav(character));
     },
     removeFav: (id) => {
-      dispach(addFav(id));
+      dispach(removeFav(id));
     },
   };
 };
